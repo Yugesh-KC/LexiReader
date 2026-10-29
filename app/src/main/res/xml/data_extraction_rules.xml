@@ -9,8 +9,6 @@
     <cloud-backup>
         <include domain="database" path="reader.db" />
         <include domain="sharedpref" path="reader_settings.xml" />
-        <exclude domain="file" path="books/" />
-        <exclude domain="file" path="covers/" />
     </cloud-backup>
     <device-transfer>
         <include domain="database" path="reader.db" />

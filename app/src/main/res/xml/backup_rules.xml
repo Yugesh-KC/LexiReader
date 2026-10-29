@@ -7,6 +7,4 @@
 <full-backup-content>
     <include domain="database" path="reader.db" />
     <include domain="sharedpref" path="reader_settings.xml" />
-    <exclude domain="file" path="books/" />
-    <exclude domain="file" path="covers/" />
 </full-backup-content>
