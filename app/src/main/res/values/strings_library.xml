@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Library screen -->
+    <string name="library_title">Library</string>
+    <string name="library_search_hint">Search your library</string>
+    <string name="library_search">Search</string>
+    <string name="library_close_search">Close search</string>
+    <string name="library_add_books">Add books</string>
+    <string name="library_all_books">All books · %1$d</string>
+    <string name="library_remove_title">Remove book?</string>
+    <string name="library_remove_message">“%1$s” and its notes will be removed from this device.</string>
+    <string name="library_remove">Remove</string>
+    <string name="library_open">Open</string>
+    <string name="cancel">Cancel</string>
+    <string name="library_empty_title">Your shelf is empty</string>
+    <string name="library_empty_message">Add EPUB, PDF, TXT, Markdown, HTML or FB2 books. Tap any word while reading to see its meaning.</string>
+    <string name="library_continue">Continue reading</string>
+    <string name="library_percent">%1$d%%</string>
+    <string name="library_importing">Importing books</string>
+
+    <!-- App theme picker -->
+    <string name="app_theme_label">App theme: %1$s</string>
+    <string name="app_theme_system">System default</string>
+    <string name="app_theme_light">Light</string>
+    <string name="app_theme_dark">Dark</string>
+    <string name="selected">Selected</string>
+
+    <!-- Import -->
+    <string name="import_failed">Import failed</string>
+    <string name="import_cannot_open">Cannot open file</string>
+    <string name="import_unsupported">Unsupported file type: %1$s. Supported: EPUB, PDF, TXT, Markdown, HTML, FB2.</string>
+    <string name="import_too_large">%1$s is too large to open (limit 500 MB).</string>
+    <string name="import_unreadable">Could not read %1$s: %2$s</string>
+    <string name="untitled">Untitled</string>
+</resources>

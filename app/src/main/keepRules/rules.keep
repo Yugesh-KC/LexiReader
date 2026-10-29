@@ -1,0 +1,4 @@
+# JavaScript bridge used by the reader WebView
+-keepclassmembers class com.example.epubreader.reader.ReaderBridge {
+   @android.webkit.JavascriptInterface public *;
+}

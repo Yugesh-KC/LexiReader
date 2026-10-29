@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Auto Backup rules for Android 11 and lower (Android 12+ uses data_extraction_rules.xml).
+   Back up the notes database and settings only. Imported books and covers are large (Auto Backup
+   stops entirely past 25 MB) and the user can re-import them from the original files.
+-->
+<full-backup-content>
+    <include domain="database" path="reader.db" />
+    <include domain="sharedpref" path="reader_settings.xml" />
+    <exclude domain="file" path="books/" />
+    <exclude domain="file" path="covers/" />
+</full-backup-content>

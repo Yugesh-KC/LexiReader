@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Reader screen -->
+    <string name="reader_book_not_found">Book not found</string>
+    <string name="reader_open_failed">Could not open this book: %1$s</string>
+    <string name="reader_too_large">This book is too large to open on this device.</string>
+    <string name="reader_renderer_crashed">The page viewer stopped unexpectedly, probably because this book needs more memory than is available.</string>
+    <string name="reader_error_title">Couldn\'t open this book</string>
+    <string name="reader_back_to_library">Back to library</string>
+    <string name="reader_library">Library</string>
+    <string name="reader_search">Search</string>
+    <string name="reader_contents">Contents</string>
+    <string name="reader_notes_and_tags">Notes &amp; tags</string>
+    <string name="reader_reading_settings">Reading settings</string>
+    <string name="reader_percent">%1$d%%</string>
+    <string name="reader_prev_chapter">Previous chapter</string>
+    <string name="reader_next_chapter">Next chapter</string>
+    <string name="reader_go_to_page_of">Go to page %1$d of %2$d</string>
+    <string name="reader_page_of">Page %1$d of %2$d</string>
+    <string name="reader_page_of_est">Page %1$d of %2$d (est.)</string>
+    <string name="reader_chapter_of">Chapter %1$d of %2$d</string>
+    <string name="reader_go_to_page">Go to page</string>
+    <string name="reader_page_range">Page (1–%1$d)</string>
+    <string name="reader_go">Go</string>
+    <string name="reader_cancel">Cancel</string>
+    <string name="reader_ok">OK</string>
+    <string name="reader_delete">Delete</string>
+    <string name="reader_back">Back</string>
+    <string name="reader_edit">Edit</string>
+    <string name="reader_close">Close</string>
+    <string name="reader_dismiss">Dismiss</string>
+    <string name="reader_previous">Previous</string>
+    <string name="reader_next">Next</string>
+    <string name="reader_undo">UNDO</string>
+    <string name="reader_back_to_where">Back to where you were</string>
+    <string name="reader_folio_page_of">%1$d of %2$d</string>
+    <string name="reader_folio_with">%1$s  ·  %2$s</string>
+    <string name="reader_last_page_in_chapter">last page in chapter</string>
+    <plurals name="reader_pages_left_in_chapter">
+        <item quantity="one">%1$d page left in chapter</item>
+        <item quantity="other">%1$d pages left in chapter</item>
+    </plurals>
+    <string name="reader_page_n">Page %1$d</string>
+    <string name="reader_pdf_chapter_page">%1$s · p. %2$d</string>
+    <string name="reader_copied">Copied</string>
+    <string name="reader_highlighted">Highlighted</string>
+    <string name="reader_note_removed">Note removed</string>
+    <string name="reader_highlight_removed">Highlight removed</string>
+    <string name="reader_save_failed">Couldn\'t save that change</string>
+    <string name="reader_tag_exists">A tag with that name already exists</string>
+    <string name="reader_tags">Tags</string>
+    <string name="reader_export_notes">Export notes</string>
+    <string name="reader_export_subject">Notes — %1$s</string>
+    <string name="reader_export_failed">Couldn\'t export the notes</string>
+    <string name="reader_no_share_app">No app available to share with</string>
+    <string name="reader_tts_unavailable">Text-to-speech isn\'t available. Install or enable a speech engine in system settings.</string>
+    <string name="reader_tts_no_voice">No English voice installed for text-to-speech</string>
+    <string name="reader_tts_failed">Couldn\'t speak that word</string>
+
+    <!-- Note editor -->
+    <string name="note_new">New note</string>
+    <string name="note_edit">Edit note</string>
+    <string name="note_no_highlight">No highlight (underline only)</string>
+    <string name="note_label">Note</string>
+    <string name="note_placeholder">Your thoughts… type [[Name]] to link a tag</string>
+    <string name="note_link_tag">Link a tag in the note</string>
+    <string name="note_no_tags_yet">No tags yet — create one below</string>
+    <string name="note_new_tag">New tag</string>
+    <string name="note_new_tag_placeholder">e.g. a character, place or theme</string>
+    <string name="note_add_tag">Add tag</string>
+    <string name="note_remove_note">Remove note</string>
+    <string name="note_remove_highlight">Remove highlight</string>
+    <string name="note_save">Save</string>
+    <string name="note_discard_title">Discard this note?</string>
+    <string name="note_discard_text">What you typed hasn\'t been saved.</string>
+    <string name="note_discard">Discard</string>
+    <string name="note_keep_editing">Keep editing</string>
+
+    <!-- Colours (spoken by screen readers) -->
+    <string name="color_yellow">Yellow</string>
+    <string name="color_green">Green</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_red">Red</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_teal">Teal</string>
+    <string name="color_brown">Brown</string>
+    <string name="color_indigo">Indigo</string>
+    <string name="color_light_green">Light green</string>
+    <string name="color_unknown">Colour</string>
+
+    <!-- Notebook and tags -->
+    <string name="notes_notebook">Notebook</string>
+    <string name="notes_tab_notes">Notes · %1$d</string>
+    <string name="notes_tab_tags">Tags · %1$d</string>
+    <string name="notes_filter">Filter notes</string>
+    <string name="notes_empty">No notes yet.\n\nLong-press any text to highlight, add a note or tag it. Tap a word to see its meaning.</string>
+    <string name="notes_no_match">Nothing matches “%1$s”.</string>
+    <string name="notes_trail">Notes</string>
+    <string name="tags_empty">Tags let you follow characters, places and themes.\n\nSelect a name in the text and choose “Tag”, or tap a name and press Tag in the dictionary card.</string>
+    <plurals name="tags_passages">
+        <item quantity="one">%1$d passage</item>
+        <item quantity="other">%1$d passages</item>
+    </plurals>
+    <string name="tags_desc_with_count">%1$s · %2$s</string>
+    <string name="tag_rename">Rename</string>
+    <string name="tag_rename_title">Rename tag</string>
+    <string name="tag_delete">Delete tag</string>
+    <string name="tag_delete_title">Delete “%1$s”?</string>
+    <string name="tag_delete_text">The tag is removed from all passages. Your highlights and notes stay.</string>
+    <string name="tag_change_color">Change tag colour</string>
+    <string name="tag_description_label">Who or what is this?</string>
+    <string name="tag_your_passages">Your passages · %1$d</string>
+    <string name="tag_no_passages">No tagged passages yet. Select text about %1$s and choose Tag to build a timeline.</string>
+    <string name="tag_mentions">Mentions in the book</string>
+    <string name="tag_mentions_count">Mentions in the book · %1$d</string>
+    <string name="tag_no_mentions">“%1$s” doesn\'t appear word-for-word in the text.</string>
+    <string name="tag_follow">Follow</string>
+
+    <!-- Search -->
+    <string name="search_placeholder">Search in book</string>
+    <string name="search_clear">Clear</string>
+    <string name="search_no_results">No results</string>
+    <plurals name="search_results">
+        <item quantity="one">%1$d result</item>
+        <item quantity="other">%1$d results</item>
+    </plurals>
+    <string name="search_results_capped">%1$d+ results</string>
+    <string name="search_trail">“%1$s”</string>
+
+    <!-- Contents -->
+    <string name="toc_go_to_page">Go to page (1–%1$d)</string>
+    <string name="toc_no_outline">This PDF has no outline.</string>
+    <string name="toc_untitled">Untitled</string>
+
+    <!-- Reading settings -->
+    <string name="settings_theme_sample">Aa</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_sepia">Sepia</string>
+    <string name="theme_dusk">Dusk</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_black">Black</string>
+    <string name="font_serif">Serif</string>
+    <string name="font_sans">Sans</string>
+    <string name="font_book">Book</string>
+    <string name="font_mono">Mono</string>
+    <string name="settings_page_turning">Page turning</string>
+    <string name="settings_pages">Pages</string>
+    <string name="settings_scroll">Scroll</string>
+    <string name="settings_text_size">Text size</string>
+    <string name="settings_smaller">Smaller</string>
+    <string name="settings_larger">Larger</string>
+    <string name="settings_line_spacing">Line spacing</string>
+    <string name="settings_margins">Margins</string>
+    <string name="settings_justify">Justify text</string>
+    <string name="settings_zoom">Zoom</string>
+    <string name="settings_meaning_on">Show meaning on</string>
+    <string name="settings_meaning_double_hint">Single tap turns pages and opens highlights</string>
+    <string name="settings_meaning_tap_hint">Single tap shows the meaning right away</string>
+    <string name="settings_double_tap">Double tap</string>
+    <string name="settings_tap">Tap</string>
+    <string name="settings_online_dict">Online dictionary</string>
+    <string name="settings_online_dict_hint">Richer definitions when connected. The offline dictionary always works.</string>
+    <string name="settings_tap_edges">Tap edges to turn page</string>
+    <string name="settings_tap_edges_hint">Tap the left or right edge to scroll a screen.</string>
+    <string name="settings_volume_keys">Volume keys turn pages</string>
+    <string name="settings_keep_screen_on">Keep screen on</string>
+
+    <!-- Dictionary card and footnotes -->
+    <string name="footnote_title">Note</string>
+    <string name="footnote_go">Go to note</string>
+    <string name="dict_pronounce">Pronounce</string>
+    <string name="dict_highlighted_passage">Highlighted passage</string>
+    <string name="dict_edit_note">Edit note</string>
+    <string name="dict_offline">Offline</string>
+    <string name="dict_online">Online</string>
+    <string name="dict_online_loading">Online…</string>
+    <string name="dict_online_no_match">Online: no match</string>
+    <string name="dict_no_internet">No internet</string>
+    <string name="dict_online_failed">Online failed · retry</string>
+    <string name="dict_online_off">Online off · tap</string>
+    <string name="dict_highlight">Highlight</string>
+    <string name="dict_note">Note</string>
+    <string name="dict_tag">Tag</string>
+    <string name="dict_copy">Copy</string>
+    <string name="dict_web">Web</string>
+    <string name="dict_no_online_def">No online definition for “%1$s”.</string>
+    <string name="dict_not_offline">Not in the offline dictionary.</string>
+    <string name="dict_hint_checking">Checking online sources…</string>
+    <string name="dict_hint_connect">Connect to the internet to search more sources.</string>
+    <string name="dict_hint_disabled">Online lookup is turned off in settings.</string>
+    <string name="dict_hint_name">Looks like a name — tag it to follow this character.</string>
+    <string name="dict_tag_word">Tag “%1$s”</string>
+    <string name="dict_show_less">Show less</string>
+    <string name="dict_show_all">Show all %1$d meanings</string>
+</resources>

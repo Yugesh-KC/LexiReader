@@ -1,0 +1,83 @@
+:root {
+  --vh: 100vh; /* replaced at runtime with the real viewport height (WebView can report 0 for vh) */
+  --fs: 19px; --lh: 1.6; --margin: 22px; --font: Georgia, 'Noto Serif', serif;
+  --bg: #ffffff; --fg: #1f1f1f; --muted: #757575; --link: #2f63c9; --rule: rgba(0,0,0,.12);
+  --top: 24px; --bottom: 24px;
+  --hl-yellow: rgba(255, 213, 79, .55); --hl-green: rgba(129, 199, 132, .5);
+  --hl-blue: rgba(100, 181, 246, .45); --hl-pink: rgba(240, 98, 146, .38);
+  --hl-purple: rgba(149, 117, 205, .42);
+  --tap: rgba(255, 193, 7, .38); --flash: rgba(255, 152, 0, .55);
+  --align: left;
+}
+html { background: var(--bg); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font); font-size: var(--fs); line-height: var(--lh);
+  -webkit-tap-highlight-color: transparent; overflow-wrap: break-word; word-wrap: break-word;
+  -webkit-hyphens: auto; hyphens: auto; -webkit-touch-callout: none;
+}
+#content { padding: calc(var(--top) + 18px) var(--margin) calc(var(--bottom) + 18px); min-height: var(--vh); box-sizing: border-box; }
+#content.pdf { padding: calc(var(--top) + 8px) 0 calc(var(--bottom) + 8px); }
+::selection { background: rgba(66, 133, 244, .32); }
+
+/* ---------- flowing text ---------- */
+section.chapter { text-align: var(--align); }
+section.chapter + section.chapter { margin-top: 2.5em; padding-top: 2.5em; border-top: 1px solid var(--rule); }
+section.chapter p { margin: 0 0 .85em; }
+section.chapter h1, section.chapter h2, section.chapter h3 { line-height: 1.25; text-align: left; margin: 1.2em 0 .6em; }
+section.chapter h1 { font-size: 1.6em; } section.chapter h2 { font-size: 1.35em; } section.chapter h3 { font-size: 1.15em; }
+section.chapter img, section.chapter svg, section.chapter video { max-width: 100%; height: auto; }
+section.chapter svg { max-height: calc(var(--vh) * .9); }
+section.chapter pre { white-space: pre-wrap; font-size: .85em; }
+section.chapter table { display: block; overflow-x: auto; border-collapse: collapse; }
+section.chapter blockquote { margin: 1em 0 1em .6em; padding-left: .9em; border-left: 3px solid var(--rule); }
+section.chapter a { color: var(--link); text-decoration: none; }
+section.chapter hr { border: 0; border-top: 1px solid var(--rule); margin: 1.6em 15%; }
+.end-of-book { text-align: center; color: var(--muted); font-size: .8em; padding: 3em 0 calc(var(--vh) * .25); letter-spacing: .2em; }
+
+/* ---------- annotations ---------- */
+mark.hl { color: inherit; background: transparent; border-radius: 2px; --u: transparent; box-shadow: inset 0 -2px 0 var(--u); }
+mark.hl.c-yellow { background: var(--hl-yellow); } mark.hl.c-green { background: var(--hl-green); }
+mark.hl.c-blue { background: var(--hl-blue); } mark.hl.c-pink { background: var(--hl-pink); }
+mark.hl.c-purple { background: var(--hl-purple); }
+mark.hl.ul { box-shadow: inset 0 -2px 0 var(--u, var(--link)); }
+mark.hl.note { text-decoration: underline dotted var(--muted); text-underline-offset: 3px; }
+
+#overlays { position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: none; }
+.ov { position: absolute; border-radius: 3px; pointer-events: none; }
+.ov.tap { background: var(--tap); }
+.ov.flash { background: var(--flash); animation: flash 2.2s ease-out forwards; }
+@keyframes flash { 0%, 55% { opacity: 1; } 100% { opacity: 0; } }
+
+/* ---------- pdf ---------- */
+.page { position: relative; margin: 0 auto 10px; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.18); overflow: hidden; }
+.page canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.page .pnum { position: absolute; left: 0; right: 0; top: 45%; text-align: center; color: #aaa; font: 14px sans-serif; }
+html[data-dark="1"] .page { background: #222; box-shadow: none; }
+html[data-dark="1"] .page canvas { filter: invert(.9) hue-rotate(180deg); }
+.textLayer { position: absolute; text-align: initial; inset: 0; overflow: hidden; line-height: 1; -webkit-text-size-adjust: none; text-size-adjust: none; transform-origin: 0 0; z-index: 2; }
+.textLayer span, .textLayer br { color: transparent; position: absolute; white-space: pre; cursor: text; transform-origin: 0% 0%; }
+.textLayer span.markedContent { top: 0; height: 0; }
+.textLayer mark.hl { position: static; color: transparent; mix-blend-mode: multiply; }
+html[data-dark="1"] .textLayer mark.hl { mix-blend-mode: screen; }
+.textLayer ::selection { background: rgba(66, 133, 244, .35); }
+.textLayer br::selection { background: transparent; }
+
+/* ---------- paged layout: one CSS column per screen ---------- */
+html[data-layout="paged"], html[data-layout="paged"] body { height: var(--vh); overflow: hidden; }
+#content.paged, #measure {
+  height: var(--vh); min-height: 0; overflow: hidden; position: relative;
+  padding: calc(var(--top) + 30px) var(--margin) calc(var(--bottom) + 38px);
+  column-fill: auto; box-sizing: border-box;
+}
+#content.paged { transition: opacity .09s ease-out; will-change: scroll-position; }
+#content.paged.turning { opacity: 0; }
+#content.paged img, #content.paged svg, #measure img, #measure svg {
+  max-height: calc(var(--vh) - var(--top) - var(--bottom) - 90px); object-fit: contain; break-inside: avoid;
+}
+#content.paged section.chapter { margin: 0; }
+#content.paged h1, #content.paged h2, #content.paged h3, #measure h1, #measure h2, #measure h3 { break-after: avoid; }
+#content.paged > #overlays { position: absolute; left: 0; top: 0; width: 0; height: 0; column-span: none; }
+#measure { position: fixed; left: -30000px; top: 0; visibility: hidden; pointer-events: none; }
+#measure img:not([height]) { height: calc(var(--vh) * .35); width: auto; }
+.pg-end { display: inline-block; width: 1px; height: 1px; }
